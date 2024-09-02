@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
   <!-- Meta and Title Tags -->
@@ -53,48 +53,48 @@
         <div class="rating-section">
           <h2>Food</h2>
           <div class="star-rating">
-            <input name="food" id="food1" value="1" type="radio">
-            <input name="food" id="food2" value="2" type="radio">
-            <input name="food" id="food3" value="3" type="radio">
-            <input name="food" id="food4" value="4" type="radio">
-            <input name="food" id="food5" value="5" type="radio">
-            <label class="star-label fa-solid fa-star" for="food5" data-group="food" data-value="5"></label>
-            <label class="star-label fa-solid fa-star" for="food4" data-group="food" data-value="4"></label>
-            <label class="star-label fa-solid fa-star" for="food3" data-group="food" data-value="3"></label>
-            <label class="star-label fa-solid fa-star" for="food2" data-group="food" data-value="2"></label>
+            <input name="food" id="food5" value="5" type="radio" data-value="1">
+            <input name="food" id="food4" value="4" type="radio" data-value="2">
+            <input name="food" id="food3" value="3" type="radio" data-value="3">
+            <input name="food" id="food2" value="2" type="radio" data-value="4">
+            <input name="food" id="food1" value="1" type="radio" data-value="5">
             <label class="star-label fa-solid fa-star" for="food1" data-group="food" data-value="1"></label>
+            <label class="star-label fa-solid fa-star" for="food2" data-group="food" data-value="2"></label>
+            <label class="star-label fa-solid fa-star" for="food3" data-group="food" data-value="3"></label>
+            <label class="star-label fa-solid fa-star" for="food4" data-group="food" data-value="4"></label>
+            <label class="star-label fa-solid fa-star" for="food5" data-group="food" data-value="5"></label>
           </div>
         </div>
 
         <div class="rating-section">
           <h2>Service</h2>
           <div class="star-rating">
-            <input name="service" id="service1" value="1" type="radio">
-            <input name="service" id="service2" value="2" type="radio">
-            <input name="service" id="service3" value="3" type="radio">
-            <input name="service" id="service4" value="4" type="radio">
-            <input name="service" id="service5" value="5" type="radio">
-            <label class="star-label fa-solid fa-star" for="service5" data-group="service" data-value="5"></label>
-            <label class="star-label fa-solid fa-star" for="service4" data-group="service" data-value="4"></label>
-            <label class="star-label fa-solid fa-star" for="service3" data-group="service" data-value="3"></label>
-            <label class="star-label fa-solid fa-star" for="service2" data-group="service" data-value="2"></label>
+            <input name="service" id="service5" value="5" type="radio" data-value="1">
+            <input name="service" id="service4" value="4" type="radio" data-value="2">
+            <input name="service" id="service3" value="3" type="radio" data-value="3">
+            <input name="service" id="service2" value="2" type="radio" data-value="4">
+            <input name="service" id="service1" value="1" type="radio" data-value="5">
             <label class="star-label fa-solid fa-star" for="service1" data-group="service" data-value="1"></label>
+            <label class="star-label fa-solid fa-star" for="service2" data-group="service" data-value="2"></label>
+            <label class="star-label fa-solid fa-star" for="service3" data-group="service" data-value="3"></label>
+            <label class="star-label fa-solid fa-star" for="service4" data-group="service" data-value="4"></label>
+            <label class="star-label fa-solid fa-star" for="service5" data-group="service" data-value="5"></label>
           </div>
         </div>
 
         <div class="rating-section">
           <h2>Restaurant Overall</h2>
           <div class="star-rating">
-            <input name="overall" id="overall1" value="1" type="radio">
-            <input name="overall" id="overall2" value="2" type="radio">
-            <input name="overall" id="overall3" value="3" type="radio">
-            <input name="overall" id="overall4" value="4" type="radio">
-            <input name="overall" id="overall5" value="5" type="radio">
-            <label class="star-label fa-solid fa-star" for="overall5" data-group="overall" data-value="5"></label>
-            <label class="star-label fa-solid fa-star" for="overall4" data-group="overall" data-value="4"></label>
-            <label class="star-label fa-solid fa-star" for="overall3" data-group="overall" data-value="3"></label>
-            <label class="star-label fa-solid fa-star" for="overall2" data-group="overall" data-value="2"></label>
+            <input name="overall" id="overall5" value="5" type="radio" data-value="1">
+            <input name="overall" id="overall4" value="4" type="radio" data-value="2">
+            <input name="overall" id="overall3" value="3" type="radio" data-value="3">
+            <input name="overall" id="overall2" value="2" type="radio" data-value="4">
+            <input name="overall" id="overall1" value="1" type="radio" data-value="5">
             <label class="star-label fa-solid fa-star" for="overall1" data-group="overall" data-value="1"></label>
+            <label class="star-label fa-solid fa-star" for="overall2" data-group="overall" data-value="2"></label>
+            <label class="star-label fa-solid fa-star" for="overall3" data-group="overall" data-value="3"></label>
+            <label class="star-label fa-solid fa-star" for="overall4" data-group="overall" data-value="4"></label>
+            <label class="star-label fa-solid fa-star" for="overall5" data-group="overall" data-value="5"></label>
           </div>
         </div>
 
@@ -175,8 +175,8 @@
 
       // Gather user feedback data
       let userFeedback = {
-        foodRating: $('input[name="food"]:checked').val() || 0,
-        serviceRating: $('input[name="service"]:checked').val() || 0,
+        foodRating: $('input[name="food"]:checked').attr("data-value") || 0,
+        serviceRating: $('input[name="service"]:checked').attr("data-value") || 0,
         overallRating: $('input[name="overall"]:checked').val() || 0,
         comments: $("#comments").val() || "no comments"
       };
