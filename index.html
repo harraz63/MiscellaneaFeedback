@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
 
 <head>
   <!-- Meta and Title Tags -->
@@ -49,7 +49,7 @@
 
     <section id="menus" class="bg-slate-200 text-center px-3 py-12">
 
-      <form id="ratingForm">
+      <form id="ratingForm" dir="rtl">
         <div class="rating-section">
           <h2>Food</h2>
           <div class="star-rating">
@@ -98,7 +98,7 @@
           </div>
         </div>
 
-        <div class="rating-section">
+        <div class="rating-section" dir="ltr">
           <h2>Your Comments</h2>
           <textarea id="comments" name="comments" placeholder="Tell us what you think" rows="4"
             class="w-full p-2 border border-gray-300 rounded"></textarea>
@@ -177,19 +177,21 @@
       let userFeedback = {
         foodRating: $('input[name="food"]:checked').attr("data-value") || 0,
         serviceRating: $('input[name="service"]:checked').attr("data-value") || 0,
-        overallRating: $('input[name="overall"]:checked').val() || 0,
+        overallRating: $('input[name="overall"]:checked').attr("data-value") || 0,
         comments: $("#comments").val() || "no comments"
       };
 
+      console.log(userFeedback)
+
       // Send email with user feedback
-      emailjs.send("service_9ph1blr", "template_bec1zwg", userFeedback)
-        .then(function (response) {
-          console.log("Sent successfully:", response);
-          alert("Your feedback has been sent!");
-        }, function (error) {
-          console.error("Failed to send:", error);
-          alert("Sorry, something went wrong. Please try again.");
-        });
+      // emailjs.send("service_9ph1blr", "template_bec1zwg", userFeedback)
+      //   .then(function (response) {
+      //     console.log("Sent successfully:", response);
+      //     alert("Your feedback has been sent!");
+      //   }, function (error) {
+      //     console.error("Failed to send:", error);
+      //     alert("Sorry, something went wrong. Please try again.");
+      //   });
     });
   </script>
 
