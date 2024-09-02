@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta and Title Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" href="assets/images/Logo-200x300.png" type="image/x-icon">
+  <meta name="author" content="Ahmed Harraz">
+  <title>Miscellanea feedback</title>
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="css/output.css">
+
+  <!-- Fontawesome By CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .star-label {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .star-label.selected {
+      color: gold;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav class="bg-forestGreen border-gray-200 font-main">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-3 md:p-5">
+        <a href="#" class="flex items-center space-x-4 rtl:space-x-reverse">
+          <img src="assets/images/Logo-200x300.png" class="w-[60px]" alt="Miscellanea Logo" />
+          <h1 class="self-center text-3xl font-extrabold text-[#FFFFF0] font-oswald tracking-wider">MISCELÁNEA</h1>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="menus" class="bg-slate-200 text-center px-3 py-12">
+
+      <form id="ratingForm">
+        <div class="rating-section">
+          <h2>Food</h2>
+          <div class="star-rating">
+            <input name="food" id="food1" value="1" type="radio">
+            <input name="food" id="food2" value="2" type="radio">
+            <input name="food" id="food3" value="3" type="radio">
+            <input name="food" id="food4" value="4" type="radio">
+            <input name="food" id="food5" value="5" type="radio">
+            <label class="star-label fa-solid fa-star" for="food5" data-group="food" data-value="5"></label>
+            <label class="star-label fa-solid fa-star" for="food4" data-group="food" data-value="4"></label>
+            <label class="star-label fa-solid fa-star" for="food3" data-group="food" data-value="3"></label>
+            <label class="star-label fa-solid fa-star" for="food2" data-group="food" data-value="2"></label>
+            <label class="star-label fa-solid fa-star" for="food1" data-group="food" data-value="1"></label>
+          </div>
+        </div>
+
+        <div class="rating-section">
+          <h2>Service</h2>
+          <div class="star-rating">
+            <input name="service" id="service1" value="1" type="radio">
+            <input name="service" id="service2" value="2" type="radio">
+            <input name="service" id="service3" value="3" type="radio">
+            <input name="service" id="service4" value="4" type="radio">
+            <input name="service" id="service5" value="5" type="radio">
+            <label class="star-label fa-solid fa-star" for="service5" data-group="service" data-value="5"></label>
+            <label class="star-label fa-solid fa-star" for="service4" data-group="service" data-value="4"></label>
+            <label class="star-label fa-solid fa-star" for="service3" data-group="service" data-value="3"></label>
+            <label class="star-label fa-solid fa-star" for="service2" data-group="service" data-value="2"></label>
+            <label class="star-label fa-solid fa-star" for="service1" data-group="service" data-value="1"></label>
+          </div>
+        </div>
+
+        <div class="rating-section">
+          <h2>Restaurant Overall</h2>
+          <div class="star-rating">
+            <input name="overall" id="overall1" value="1" type="radio">
+            <input name="overall" id="overall2" value="2" type="radio">
+            <input name="overall" id="overall3" value="3" type="radio">
+            <input name="overall" id="overall4" value="4" type="radio">
+            <input name="overall" id="overall5" value="5" type="radio">
+            <label class="star-label fa-solid fa-star" for="overall5" data-group="overall" data-value="5"></label>
+            <label class="star-label fa-solid fa-star" for="overall4" data-group="overall" data-value="4"></label>
+            <label class="star-label fa-solid fa-star" for="overall3" data-group="overall" data-value="3"></label>
+            <label class="star-label fa-solid fa-star" for="overall2" data-group="overall" data-value="2"></label>
+            <label class="star-label fa-solid fa-star" for="overall1" data-group="overall" data-value="1"></label>
+          </div>
+        </div>
+
+        <div class="rating-section">
+          <h2>Your Comments</h2>
+          <textarea id="comments" name="comments" placeholder="Tell us what you think" rows="4"
+            class="w-full p-2 border border-gray-300 rounded"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Rating</button>
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.7465373764385!2d12.4761667!3d41.898307800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f604e3b4e5e7d%3A0xfd4853f3f9ca6580!2sMiscellanea!5e0!3m2!1sit!2sit!4v1723843311086!5m2!1sit!2sit"
+        width="100%" height="300" style="border:0; width:100%; height:300px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="flex flex-col justify-start items-center gap-4 p-4 bg-[#ECFFDC]">
+      <div class="flex justify-center relative w-full mb-6">
+        <h2 class="text-xl font-bold tracking-wide">Contattaci</h2>
+      </div>
+
+      <div class="flex flex-col relative w-full">
+        <div class="flex items-start gap-2 mb-2">
+          <span class="text-base font-semibold">Indirizzo:</span>
+          <p class="text-base">Via della Palombella 37, 00186 Roma, Italia</p>
+        </div>
+        <div class="h-1 bg-green-500 mb-4"></div>
+
+        <div class="flex items-start gap-2 mb-2">
+          <span class="text-base font-semibold">Telefono:</span>
+          <p class="text-base">+39 (0)6 68135318</p>
+        </div>
+        <div class="h-1 bg-green-500 mb-4"></div>
+
+        <div class="flex items-start gap-2 mb-2">
+          <span class="text-base font-semibold">Orario:</span>
+          <p class="text-base">Tutti i giorni, dalle 10:00 alle 03:00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-white p-4 bg-forestGreen text-center">
+      <div class="copyright-container">
+        <p class="copyright">© Copyright <strong>Miscellanea Pub</strong>. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/index.js"></script>
+  <!-- EmailJS Integration -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    // Handle the star selection and apply the selected class
+    $('input[name="food"], input[name="service"], input[name="overall"]').on(
+      "change",
+      function () {
+        const ratingName = $(this).attr("name");
+        $(`.star-label[for^=${ratingName}]`).removeClass("selected");
+        $(`.star-label[for=${ratingName}${$(this).val()}]`).addClass("selected");
+      }
+    );
+    // Initialize EmailJS
+    emailjs.init("qbWcQcVt0jI6NPETU");
+
+    // Handle form submission
+    $("#ratingForm").on("submit", function (e) {
+      e.preventDefault();
+
+      // Gather user feedback data
+      let userFeedback = {
+        foodRating: $('input[name="food"]:checked').val() || 0,
+        serviceRating: $('input[name="service"]:checked').val() || 0,
+        overallRating: $('input[name="overall"]:checked').val() || 0,
+        comments: $("#comments").val() || "no comments"
+      };
+
+      // Send email with user feedback
+      emailjs.send("service_9ph1blr", "template_bec1zwg", userFeedback)
+        .then(function (response) {
+          console.log("Sent successfully:", response);
+          alert("Your feedback has been sent!");
+        }, function (error) {
+          console.error("Failed to send:", error);
+          alert("Sorry, something went wrong. Please try again.");
+        });
+    });
+  </script>
+
+  <!-- Optional Scripts -->
+  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+
+</html>
