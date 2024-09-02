@@ -181,17 +181,15 @@
         comments: $("#comments").val() || "no comments"
       };
 
-      console.log(userFeedback)
-
       // Send email with user feedback
-      // emailjs.send("service_9ph1blr", "template_bec1zwg", userFeedback)
-      //   .then(function (response) {
-      //     console.log("Sent successfully:", response);
-      //     alert("Your feedback has been sent!");
-      //   }, function (error) {
-      //     console.error("Failed to send:", error);
-      //     alert("Sorry, something went wrong. Please try again.");
-      //   });
+      emailjs.send("service_9ph1blr", "template_bec1zwg", userFeedback)
+        .then(function (response) {
+          console.log("Sent successfully:", response);
+          alert("Your feedback has been sent!");
+        }, function (error) {
+          console.error("Failed to send:", error);
+          alert("Sorry, something went wrong. Please try again.");
+        });
     });
   </script>
 
